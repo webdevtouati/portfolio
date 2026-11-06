@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional CV of Noura Touati, Full-Stack Web Developer.">
+  <title>Noura Touati | Full-Stack Web Developer</title>
+  <script src="languages.js" defer></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172431;
+      --navy: #142333;
+      --gold: #bd8c55;
+      --muted: #596671;
+      --line: #dce2e5;
+      --pale: #f2f5f6;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: #e8ecef; }
+    body {
+      max-width: 860px;
+      margin: 28px auto;
+      padding: 48px 58px;
+      background: #fff;
+      color: var(--ink);
+      font: 10pt/1.48 Arial, Helvetica, sans-serif;
+      box-shadow: 0 8px 36px #1724311a;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 5px; font-size: 30pt; line-height: 1.05; letter-spacing: -.8pt; }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 25px 0 12px;
+      color: var(--navy);
+      font-size: 11pt;
+      letter-spacing: 1.05pt;
+      text-transform: uppercase;
+    }
+    h2::after { height: 1px; flex: 1; background: var(--line); content: ""; }
+    h3 { margin-bottom: 2px; font-size: 10.5pt; line-height: 1.35; }
+    a { color: inherit; text-decoration: none; }
+    .masthead {
+      position: relative;
+      margin: -48px -58px 25px;
+      padding: 34px 58px 27px;
+      border-bottom: 4px solid var(--gold);
+      background: var(--navy);
+      color: #fff;
+    }
+    .role { margin: 0 0 15px; color: #e7c69f; font-size: 11pt; font-weight: 700; letter-spacing: 1.6pt; text-transform: uppercase; }
+    .contact { display: flex; flex-wrap: wrap; gap: 5px 17px; color: #e2e8eb; font-size: 9pt; }
+    .contact a { border-bottom: 1px solid #ffffff55; }
+    .summary { margin: 0; color: #384754; font-size: 10.5pt; line-height: 1.62; }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+    .skill-line { margin: 0; color: var(--muted); font-size: 9.5pt; }
+    .skill-line strong { color: var(--ink); }
+    .experience { display: grid; grid-template-columns: 138px 1fr; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); break-inside: avoid; }
+    .experience:first-of-type { border-top: 0; }
+    .company { color: var(--gold); font-size: 9pt; font-weight: 700; }
+    .dates { margin-top: 4px; color: var(--muted); font-size: 8.5pt; }
+    .job-title { margin-bottom: 4px; font-weight: 700; }
+    .experience ul { margin: 4px 0 0; padding-left: 17px; }
+    .experience li { margin: 2px 0; color: #43515c; }
+    .page-two { break-before: page; page-break-before: always; }
+    .page-two-heading { margin: 0 0 4px; color: var(--navy); font-size: 18pt; letter-spacing: -.4pt; }
+    .page-two-subtitle { margin-bottom: 19px; color: var(--muted); }
+    .projects { display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; }
+    .project { padding: 8px 0; border-top: 1px solid var(--line); break-inside: avoid; }
+    .project h3 { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .project a { color: var(--gold); font-size: 8.5pt; font-weight: 400; }
+    .project p { margin: 2px 0 0; color: var(--muted); font-size: 9pt; }
+    .events { padding: 13px 15px; border-left: 3px solid var(--gold); background: var(--pale); color: #43515c; }
+    .events p { margin: 0; }
+    .education { display: grid; grid-template-columns: 1fr auto; gap: 3px 20px; padding: 9px 0; border-top: 1px solid var(--line); }
+    .education strong { font-size: 10pt; }
+    .education span { color: var(--muted); font-size: 9pt; }
+    .education time { color: var(--gold); font-size: 9pt; font-weight: 700; }
+    .additional { color: var(--muted); }
+    .additional strong { color: var(--ink); }
+    .print-button {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--navy);
+      color: #fff;
+      font: 700 14px Arial, sans-serif;
+      cursor: pointer;
+    }
+    .cv-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 10px 0;
+      color: var(--muted);
+      font-size: 9pt;
+    }
+    .cv-toolbar select { padding: 5px 8px; border: 1px solid var(--line); background: #fff; color: var(--ink); }
+    .cv-toolbar a { padding: 5px 8px; border: 1px solid var(--line); color: var(--navy); }
+    .cv-toolbar a:hover { border-color: var(--gold); }
+
+    @page { size: A4; margin: 15mm 16mm; }
+    @media print {
+      html, body { max-width: none; margin: 0; padding: 0; background: #fff; box-shadow: none; }
+      body { font-size: 9.5pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .masthead { margin: 0 -16mm 18px; padding: 8px 16mm 12px; }
+      h1 { font-size: 27pt; }
+      h2 { margin-top: 19px; margin-bottom: 9px; }
+      .experience { padding: 8px 0; }
+      .experience li { margin: 1px 0; }
+      .project { padding: 6px 0; }
+      .print-button { display: none; }
+      .cv-toolbar { display: none; }
+      a { color: inherit; }
+    }
+    @media screen and (max-width: 700px) {
+      body { margin: 0; padding: 28px 22px; }
+      .masthead { margin: -28px -22px 22px; padding: 28px 22px 22px; }
+      .skills, .projects { grid-template-columns: 1fr; }
+      .experience { grid-template-columns: 1fr; gap: 4px; }
+      .page-two { margin-top: 34px; padding-top: 28px; border-top: 3px solid var(--gold); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="cv-toolbar" aria-label="CV language and downloads">
+    <label for="languageSelector">Language</label>
+    <select id="languageSelector" aria-label="Choose language">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+    </select>
+    <a href="Noura-Touati-CV-EN.pdf" download>EN PDF</a>
+    <a href="Noura-Touati-CV-FR.pdf" download>FR PDF</a>
+    <a href="Noura-Touati-CV-DE.pdf" download>DE PDF</a>
+  </nav>
+  <header class="masthead">
+    <h1>Noura Touati</h1>
+    <p class="role">Full-Stack Web Developer</p>
+    <div class="contact">
+      <a href="mailto:webdev.touati@gmail.com">webdev.touati@gmail.com</a>
+      <a href="tel:0607789324">0607789324</a>
+      <span>Morocco</span>
+      <a href="https://www.linkedin.com/in/noura-touati-84a982255/">LinkedIn profile</a>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Professional Profile</h2>
+      <p class="summary">Full-Stack Web Developer experienced in building responsive websites, web applications, B2B platforms, and badge systems. Works across front-end and back-end development, with practical skills in PHP, Laravel, React, JavaScript, and MySQL. Brings additional experience in database scraping, template customization, SEO, and digital marketing, with a collaborative approach to delivering and improving digital products.</p>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skills">
+        <p class="skill-line"><strong>Front end:</strong> HTML, CSS, JavaScript, Bootstrap, jQuery, React</p>
+        <p class="skill-line"><strong>Back end:</strong> PHP, Laravel (Breeze, Voyager)</p>
+        <p class="skill-line"><strong>Data &amp; tools:</strong> MySQL, Git, GitHub, cPanel</p>
+        <p class="skill-line"><strong>CMS &amp; web:</strong> WordPress, template customization, responsive design</p>
+        <p class="skill-line"><strong>Digital:</strong> SEO, Google Search Console, Google Maps, e-commerce</p>
+        <p class="skill-line"><strong>Other:</strong> Database scraping, Merise, UML, social media, Meta Ads</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Professional Experience</h2>
+
+      <article class="experience">
+        <div><div class="company">MarocAnnonces</div><div class="dates">2024–Present</div></div>
+        <div>
+          <h3 class="job-title">Full-Stack Web Developer</h3>
+          <ul>
+            <li>Build front-end and back-end features for Zawaj24.com and Banques.ma.</li>
+            <li>Update the MarocAnnonces back-office design and develop a new version of MarocAnnonces.ma.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience">
+        <div><div class="company">Smart Expos Events Morocco</div><div class="dates">1 year</div></div>
+        <div>
+          <h3 class="job-title">Full-Stack Web Developer</h3>
+          <ul>
+            <li>Built websites for Smart Expos, HR Hub, SeaFood4Africa, AMPF, Refrigair Expo, and Éclat Events.</li>
+            <li>Created badge systems and B2B platforms; scraped databases and customized templates.</li>
+            <li>Supported major international industry events, including SeaFood4Africa, IMMOTECH 2024, the International Forum of the Fishing Industry, the International Plastics Forum, and World Refrigeration Day.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience">
+        <div><div class="company">Co Business COB</div><div class="dates">2024 · 1 month</div></div>
+        <div>
+          <h3 class="job-title">Web Development Intern</h3>
+          <ul><li>Created websites for Reassure Assurance and FCC Academy.</li></ul>
+        </div>
+      </article>
+
+      <article class="experience">
+        <div><div class="company">Ordiproxi</div><div class="dates">2023 · 2 months</div></div>
+        <div>
+          <h3 class="job-title">Final-Year Intern · Web &amp; Digital Marketing</h3>
+          <ul><li>Worked on Tabtel.ma, Facebook advertising, dropshipping, sales, and social media management.</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="page-two" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <p class="page-two-subtitle">Selected websites and digital platforms. Project links show the current live sites; some designs may have changed since the versions I created.</p>
+      <div class="projects">
+        <article class="project"><h3>Smart Expos <a href="https://smart-events.ma/">smart-events.ma</a></h3><p>Event website</p></article>
+        <article class="project"><h3>HR Hub <a href="https://www.hrhub.ma/">hrhub.ma</a></h3><p>Website</p></article>
+        <article class="project"><h3>SeaFood4Africa <a href="https://seafood4africa.com/">seafood4africa.com</a></h3><p>Event website</p></article>
+        <article class="project"><h3>SeaFood4Africa Platform <a href="https://platforme.seafood4africa.com/">platforme.seafood4africa.com</a></h3><p>B2B platform</p></article>
+        <article class="project"><h3>Badge System <a href="https://badge.seafood4africa.com/">badge.seafood4africa.com</a></h3><p>Event badge system</p></article>
+        <article class="project"><h3>AMPF <a href="https://ampf.ma/">ampf.ma</a></h3><p>Website</p></article>
+        <article class="project"><h3>Refrigair Expo <a href="https://refrigairexpo.com/">refrigairexpo.com</a></h3><p>Event website</p></article>
+        <article class="project"><h3>Éclat Events</h3><p>Event website</p></article>
+        <article class="project"><h3>Zawaj24 <a href="https://zawaj24.com/">zawaj24.com</a></h3><p>Ongoing work · current version</p></article>
+        <article class="project"><h3>Banques.ma <a href="https://banques.ma/">banques.ma</a></h3><p>Ongoing work · current version</p></article>
+        <article class="project"><h3>MarocAnnonces <a href="https://www.marocannonces.com/">marocannonces.com</a></h3><p>Ongoing work · current version</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="education"><strong>Diploma in Full-Stack Web Development</strong><time>2023</time><span>Professional training</span></div>
+      <div class="education"><strong>Baccalaureate in Physical Sciences</strong><time>2021</time><span>Secondary education</span></div>
+    </section>
+
+    <section aria-labelledby="languages-heading">
+      <h2 id="languages-heading">Additional Experience</h2>
+      <p class="additional"><strong>Digital marketing:</strong> SEO optimization, Facebook and Instagram advertising, social media management, e-commerce, and online visibility.</p>
+    </section>
+  </main>
+  <button class="print-button" type="button" onclick="window.print()">Download / Print CV</button>
+</body>
+</html>
